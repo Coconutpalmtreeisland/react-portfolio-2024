@@ -8,7 +8,7 @@ const Section1 = () => {
                 <h2 className="tooltip">
                     Incredorable
                     {toolTips.map((tip, idx) => (
-                        <spna key={idx} className={`sticker sticker0${idx + 1}`}>{tip.tag}</spna>
+                        <span key={idx} className={`sticker sticker0${idx + 1}`}>{tip.tag}</span>
                     ))}
                 </h2>
                 <p>

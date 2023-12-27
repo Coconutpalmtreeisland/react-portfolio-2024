@@ -15,7 +15,7 @@ export function hideHeaderImg() {
     ScrollTrigger.create({
         start: "bottom top",
         end: "bottom top",
-        markers: true,  // 디버깅을 위해 마커 추가
+        // markers: true,  // 디버깅을 위해 마커 추가
         onUpdate: (self) => {
             self.direction === -1 ? showHeaderImg.play() : showHeaderImg.reverse()
         }

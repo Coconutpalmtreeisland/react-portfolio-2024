@@ -77,43 +77,30 @@
     border-radius: 13px;
 }
 
-.comment__list>ul {
+.comment__list>ul>li {
     margin-bottom: 25px;
-    padding-left: 16px;
 }
 
-.comment__list ul:nth-child(even) {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
-
-.comment__list ul:nth-child(even) .name {
-    margin-right: 0;
-}
-
-.comment__list ul:nth-child(even)>.comment__bottom {
-    text-align: right;
-    border-radius: 20px 0px 20px 20px;
-    background-color: #ded8ff;
-    color: var(--primarycolor);
-}
-
-.comment__list ul>li {
+.comment__list ul>li>.comment__top,
+.comment__list ul>li>.comment__bottom {
     font-size: 20px;
     font-weight: 500;
     color: var(--primarycolor);
 }
 
-.comment__list ul>li>ul {
+.comment__list ul>li>.comment__bottom {
+    color: var(--white);
+}
+
+.comment__list ul>li>.comment__top>ul {
     display: flex;
 }
 
-.comment__list ul>li>ul>li {
+.comment__list ul>li>.comment__top>ul>li {
     display: flex;
 }
 
-.comment__list ul>li>ul>li.name {
+.comment__list ul>li>.comment__top>ul>li.name {
     font-size: 16px;
     margin-right: 20px;
     margin-bottom: 2px;
@@ -127,27 +114,58 @@
     color: var(--white);
 }
 
+.comment__list ul li:nth-child(even) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.comment__list ul li:nth-child(even) .comment__top .name {
+    margin-right: 0;
+}
+
+.comment__list ul li:nth-child(even) .comment__bottom {
+    text-align: right;
+    border-radius: 20px 0px 20px 20px;
+    background-color: #ded8ff;
+    color: var(--primarycolor);
+}
+
 .input__info {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.comment__wrap input {
+.comment__wrap label {
     width: 10%;
     height: 45px;
     border: 0;
     margin-right: 1%;
+    background-color: #FDF7F0;
+}
+
+.comment__wrap label.comment {
+    width: 57%;
+    height: 45px;
+    border: 0;
+    background-color: #FDF7F0;
+}
+
+.comment__wrap label:nth-of-type(2) {
+    width: 20%;
+}
+
+.comment__wrap input {
+    width: 100%;
+    height: 100%;
+    border: 0;
     padding: 10px 17px;
     background-color: #FDF7F0;
     color: var(--primarycolor);
     font-family: "SCoreDream";
     font-weight: 500;
     font-size: 15px;
-}
-
-.comment__wrap input:nth-of-type(2) {
-    width: 20%;
 }
 
 .comment__wrap input:focus {
@@ -165,8 +183,8 @@
 }
 
 .input__info textarea {
-    width: 57%;
-    height: 45px;
+    width: 100%;
+    height: 100%;
     border: 0;
     resize: none;
     padding: 10px 17px;
@@ -190,18 +208,22 @@
 }
 
 .input__info textarea::-webkit-scrollbar {
-    width: 13px;
+    display: none;
 }
 
-.input__info textarea::-webkit-scrollbar-thumb {
-    background-color: #F8E6D2;
-    border-radius: 13px;
-}
+// .input__info textarea::-webkit-scrollbar {
+//     width: 13px;
+// }
 
-.input__info textarea::-webkit-scrollbar-track {
-    background-color: #FAEEE0;
-    border-radius: 13px;
-}
+// .input__info textarea::-webkit-scrollbar-thumb {
+//     background-color: #F8E6D2;
+//     border-radius: 13px;
+// }
+
+// .input__info textarea::-webkit-scrollbar-track {
+//     background-color: #FAEEE0;
+//     border-radius: 13px;
+// }
 
 .input__info button {
     width: 10%;
@@ -222,19 +244,21 @@
     #section4 {
         padding: 120px 50px;
     }
-
 }
 
 @media (max-width: 880px) {
     .input__info button {
         height: 35px;
         padding: 10px 5px;
-        font-size: 12px;
+        font-size: 10px;
+    }
+
+    .input__info label {
+        height: 35px;
     }
 
     .input__info input,
     .input__info textarea {
-        height: 35px;
         padding: 10px 5px;
         font-size: 12px;
     }
@@ -271,7 +295,8 @@
         font-size: 20px;
     }
 
-    .comment__list ul>li {
+    .comment__list ul>li>.comment__top,
+    .comment__list ul>li>.comment__bottom {
         font-size: 16px;
     }
 }
@@ -299,15 +324,16 @@
         padding: 5px 10px 5px 0;
     }
 
-    .comment__list>ul {
+    .comment__list>ul>li {
         margin-bottom: 12px;
     }
 
-    .comment__list ul>li {
+    .comment__list ul>li>.comment__top>ul>li,
+    .comment__list ul>li>.comment__bottom {
         font-size: 14px;
     }
 
-    .comment__list ul>li>ul>li.name {
+    .comment__list ul>li>.comment__top>ul>li.name {
         font-size: 10px;
     }
 
@@ -322,8 +348,7 @@
         font-size: 10px;
     }
 
-    .input__info input,
-    .input__info textarea {
+    .input__info label {
         height: 30px;
     }
 
@@ -356,7 +381,7 @@
         height: 52%;
     }
 
-    .comment__list>ul {
+    .comment__list>ul>li {
         padding-left: 10px;
     }
 
@@ -371,6 +396,9 @@
     .input__info input,
     .input__info textarea {
         padding: 5px 5px;
+    }
+
+    .input__info label {
         height: 20px;
     }
 

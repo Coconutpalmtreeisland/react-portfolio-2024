@@ -34,12 +34,13 @@
 
 .header__left nav ul {
     display: flex;
+    align-items: center;
 }
 
 .header__left nav li {
     display: flex;
     color: var(--primarycolor);
-    margin-right: 66px;
+    margin-right: 45px;
 }
 
 .header__left nav li:last-child {
@@ -58,7 +59,7 @@
 .header__left nav li a.active {
     background-color: var(--primarycolor);
     color: var(--white);
-    padding: 1vw 2vw;
+    padding: 0.8vw 1vw;
     border-radius: 50px;
 }
 

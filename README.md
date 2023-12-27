@@ -3,7 +3,7 @@
 2. git에 업로드
 3. [lenis 사이트] (https://lenis.studiofreight.com/)
 
-## 설치
+## client 설치
 1. react 설치 `npx create-react-app 프로젝트 이름`
 2. gsap 설치 `npm i gsap`
 3. sass 설치 `npm i sass`
@@ -14,3 +14,11 @@
 8. firebase 설치 `npm install firebase`
 9. redux 설치 `npm install react-redux`
 10. redux toolkit 설치 `npm install @reduxjs/toolkit`
+11. react-icons 설치 : `npm install react-icons`
+
+## server 설치
+1. `npm init -y;`
+2. express 설치 `npm install express --save;`
+3. nodemon 설치 `npm install nodemon --save;`
+4. path 설치 `npm install path --save;`
+5. mongoose 설치 `npm install mongoose --save;`

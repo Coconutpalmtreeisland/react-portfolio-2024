@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 const CommentWrite = () => {
@@ -7,7 +6,6 @@ const CommentWrite = () => {
     const [name, setName] = useState("");
     const [password, setPassword] = useState("");
 
-    const navigate = useNavigate();
     const [reload, setReload] = useState(false);
 
     useEffect(() => {
@@ -45,6 +43,7 @@ const CommentWrite = () => {
         <div className="input__info">
             <label htmlFor='name'>
                 <input
+                    style={{ imeMode: 'active' }}
                     type="text"
                     placeholder="이름"
                     value={name}
@@ -53,6 +52,7 @@ const CommentWrite = () => {
             </label>
             <label htmlFor="password">
                 <input
+                    style={{ imeMode: 'inactive' }}
                     type="text"
                     placeholder="비밀번호"
                     value={password}
@@ -61,6 +61,7 @@ const CommentWrite = () => {
             </label>
             <label htmlFor="comment" className='comment'>
                 <textarea
+                    style={{ imeMode: 'active' }}
                     name="comment"
                     id="comment"
                     placeholder="댓글을 작성해주세요."

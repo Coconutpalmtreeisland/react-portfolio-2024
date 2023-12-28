@@ -90,6 +90,12 @@
 
 .comment__list ul>li>.comment__bottom {
     color: var(--white);
+    display: flex;
+    align-items: center;
+}
+
+.comment__list ul>li:nth-child(even)>.comment__bottom {
+    flex-direction: row-reverse;
 }
 
 .comment__list ul>li>.comment__top>ul {
@@ -98,6 +104,7 @@
 
 .comment__list ul>li>.comment__top>ul>li {
     display: flex;
+    align-items: center;
 }
 
 .comment__list ul>li>.comment__top>ul>li.name {
@@ -105,6 +112,25 @@
     margin-right: 20px;
     margin-bottom: 2px;
 }
+
+.comment__list ul>li>.comment__top>ul>li>button {
+    margin: 0 5px;
+    background: none;
+    border: 0;
+}
+
+.comment__list ul>li>.comment__top>ul>li>button:last-child {
+    margin: 0;
+}
+
+/* .grIcon polyline {
+    fill: #6B51FE;
+    stroke: #6B51FE;
+}
+.grIcon polyline {
+    fill: currentColor;
+    stroke: currentColor;
+} */
 
 .comment__list .comment__bottom {
     width: 46%;
@@ -122,12 +148,29 @@
 
 .comment__list ul li:nth-child(even) .comment__top .name {
     margin-right: 0;
+    flex-direction: row-reverse;
 }
 
 .comment__list ul li:nth-child(even) .comment__bottom {
     text-align: right;
     border-radius: 20px 0px 20px 20px;
     background-color: #ded8ff;
+    color: var(--primarycolor);
+}
+
+.comment__bottom span {
+    display: flex;
+}
+
+.comment__bottom button {
+    background: none;
+    border: 0;
+    font-weight: 500;
+    color: var(--white);
+    margin: 0 3px;
+}
+
+.comment__list ul li:nth-child(even) .comment__bottom button {
     color: var(--primarycolor);
 }
 
@@ -166,6 +209,17 @@
     font-family: "SCoreDream";
     font-weight: 500;
     font-size: 15px;
+}
+
+.comment__wrap input.edit__input {
+    background-color: var(--primarycolor);
+    color: var(--white);
+}
+
+.comment__list ul li:nth-child(even) input.edit__input {
+    background-color: #ded8ff;
+    color: var(--primarycolor);
+    text-align: right;
 }
 
 .comment__wrap input:focus {
@@ -211,19 +265,19 @@
     display: none;
 }
 
-// .input__info textarea::-webkit-scrollbar {
-//     width: 13px;
-// }
+/* .input__info textarea::-webkit-scrollbar {
+    width: 13px;
+}
 
-// .input__info textarea::-webkit-scrollbar-thumb {
-//     background-color: #F8E6D2;
-//     border-radius: 13px;
-// }
+.input__info textarea::-webkit-scrollbar-thumb {
+    background-color: #F8E6D2;
+    border-radius: 13px;
+}
 
-// .input__info textarea::-webkit-scrollbar-track {
-//     background-color: #FAEEE0;
-//     border-radius: 13px;
-// }
+.input__info textarea::-webkit-scrollbar-track {
+    background-color: #FAEEE0;
+    border-radius: 13px;
+} */
 
 .input__info button {
     width: 10%;

@@ -22,7 +22,7 @@ const Section2 = () => {
             </div>
             <div>
                 {lineText.map((text, key) => (
-                    <div className={`line line${key + 1}`}>
+                    <div className={`line line${key + 1}`} key={key}>
                         <p>{text.text}<span></span>{text.text}<span></span>{text.text}<span></span></p>
                         <p>{text.text}<span></span>{text.text}<span></span>{text.text}<span></span></p>
                     </div>

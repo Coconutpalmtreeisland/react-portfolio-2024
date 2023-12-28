@@ -12,8 +12,8 @@ const Section3 = () => {
                 </div>
                 <div className="site__wrap">
                     {siteText.map((site, key) => (
-                        <>
-                            <div key={key} className={`site__img s${key + 1} card-box`}>
+                        <React.Fragment key={key}>
+                            <div className={`site__img s${key + 1} card-box`}>
                                 <img src={site.img} alt={site.title} />
                             </div>
                             <div className={`site s${key + 1} card-box`}>
@@ -32,7 +32,7 @@ const Section3 = () => {
                                     </div>
                                 </div>
                             </div>
-                        </>
+                        </React.Fragment>
                     ))}
                 </div>
             </div>

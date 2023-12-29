@@ -15,6 +15,7 @@
 9. redux 설치 `npm install react-redux`
 10. redux toolkit 설치 `npm install @reduxjs/toolkit`
 11. react-icons 설치 : `npm install react-icons`
+12. moment 설치 `npm install moment`  
 
 ## server 설치
 1. `npm init -y;`

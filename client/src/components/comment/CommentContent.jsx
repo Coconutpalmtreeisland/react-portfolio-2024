@@ -51,11 +51,11 @@ const CommentContent = (props) => {
                 if (res.data.success) {
                     alert("댓글을 수정했습니다.");
                     // console.log(res.data);
-                    props.reple.reple = reple;  // 수정된 댓글을 상태로 업데이트
+                    props.updateComment(body);  // 수정된 댓글을 상태로 업데이트
+                    setIsEditing(false);
                 } else {
                     alert("댓글을 수정하지 못했습니다.");
                 }
-                return window.location.reload();
             })
             .catch((err) => {
                 console.log("요청 실패 : ", err);
@@ -81,7 +81,7 @@ const CommentContent = (props) => {
                 .then((res) => {
                     if (res.data.success) {
                         alert("댓글이 삭제되었습니다.");
-                        window.location.reload();
+                        props.deleteComment(props.reple._id);
                     }
                 })
                 .catch((err) => {

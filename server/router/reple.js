@@ -13,9 +13,9 @@ router.post("/submit", async (req, res) => {
 
     try {
         const NewReple = new Reple(temp);
-        await NewReple.save();
+        const savedReple = await NewReple.save();
 
-        return res.status(200).json({ success: true });
+        return res.status(200).json({ success: true, newComment: savedReple });
     }
     catch (err) {
         console.log(err);

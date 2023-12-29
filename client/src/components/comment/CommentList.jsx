@@ -11,17 +11,25 @@ const CommentList = () => {
             .then((res) => {
                 if (res.data.success) {
                     // console.log(res.data);
-                    setCommentList([...res.data.commentList]);
+                    setCommentList(res.data.commentList);
                 }
             })
-    }, [])
+    }, [commentList])
+
+    const updateComment = (updatedComment) => {
+        setCommentList(commentList.map(comment => comment._id === updatedComment._id ? updatedComment : comment));
+    }
+
+    const deleteComment = (id) => {
+        setCommentList(commentList.filter(comment => comment._id !== id));
+    }
 
     return (
         <div className="comment__list">
             <ul>
                 {commentList.map((reple, idx) => {
                     return (
-                        <CommentContent reple={reple} key={idx} />
+                        <CommentContent reple={reple} key={idx} updateComment={updateComment} deleteComment={deleteComment} />
                     )
                 })}
             </ul>

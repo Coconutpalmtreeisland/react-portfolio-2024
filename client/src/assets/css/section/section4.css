@@ -117,6 +117,7 @@
     margin: 0 5px;
     background: none;
     border: 0;
+    cursor: pointer;
 }
 
 .comment__list ul>li>.comment__top>ul>li>button:last-child {

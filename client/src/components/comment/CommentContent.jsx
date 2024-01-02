@@ -9,6 +9,8 @@ const CommentContent = (props) => {
     const [name] = useState(props.reple.name);
     const [password] = useState(props.reple.password);
 
+    const [passwordIncorrect, setPasswordIncorrect] = useState(false);
+
     const [isEditing, setIsEditing] = useState(false);
     const toggleEdit = () => {
         setIsEditing(!isEditing);
@@ -19,10 +21,11 @@ const CommentContent = (props) => {
         const inputPass = prompt("비밀번호를 입력해주세요");
         if (inputPass === password) {
             // alert("일치");
+            setPasswordIncorrect(false);
             return true;
         } else {
             alert("비밀번호를 다시 한번 확인해주세요!")
-            window.location.reload();
+            setPasswordIncorrect(true);
             return false;
         }
     }

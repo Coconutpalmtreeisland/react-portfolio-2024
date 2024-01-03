@@ -9,6 +9,7 @@ import { polaroid } from './utils/polaroid';
 
 import HomeView from './views/HomeView';
 import { hideHeaderImg } from './utils/hideHeaderImg';
+import Loading from './components/Loading';
 
 const App = () => {
   useEffect(() => {

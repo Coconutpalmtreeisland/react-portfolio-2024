@@ -27,8 +27,8 @@ const Section3 = () => {
                                         <span>{site.tag[2]}</span>
                                     </div>
                                     <div>
-                                        <a href={site.view}><span>View</span></a>
-                                        <a href={site.code}><span>Code</span></a>
+                                        <a href={site.view} target="_blank" rel="noopener noreferrer"><span>View</span></a>
+                                        <a href={site.code} target="_blank" rel="noopener noreferrer"><span>Code</span></a>
                                     </div>
                                 </div>
                             </div>

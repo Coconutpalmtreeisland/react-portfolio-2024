@@ -56,6 +56,7 @@ const CommentWrite = ({ showSubmit }) => {
                 <textarea
                     name="comment"
                     id="comment"
+                    rows={1}
                     placeholder="댓글을 작성해주세요."
                     value={comment}
                     onChange={(e) => { setComment(e.currentTarget.value) }}

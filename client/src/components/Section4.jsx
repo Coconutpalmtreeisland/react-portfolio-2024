@@ -15,9 +15,10 @@ const Section4 = () => {
 
     return (
         <section id="section4">
-            <div className="window__wrap">
-                <div className="window__bar"></div>
-                <div className="title"><span></span>comment</div>
+            <div className="window__wrap container">
+                <div className="window__bar">
+                    <div className="title"><span></span>comment</div>
+                </div>
                 <div className="comment__wrap">
                     <CommentList comments={comments} deleteComment={deleteComment} />
                     <CommentWrite showSubmit={addComment} />

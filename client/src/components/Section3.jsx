@@ -7,7 +7,7 @@ const Section3 = () => {
             <div className="container">
                 <div className="about__tag"><span></span>Work List</div>
                 <div className="about__left">
-                    사용자 <em>경험 중심의 디자인</em>과 <strong>실용적인 기능</strong> 제공을 목표로 하였습니다. 이를 통해 사용자들에게 <b>효과적인 정보 접근성과 우수한
+                    사용자 <em>경험 중심의 디자인</em> 과 <strong>실용적인 기능</strong> 제공을 목표로 하였습니다. 이를 통해 사용자들에게 <b>효과적인 정보 접근성과 우수한
                         서비스 이용 경험을 제공</b>하고자 하였습니다.
                 </div>
                 <div className="site__wrap">
